@@ -6,7 +6,7 @@ String
 Object
 */
 
-let name = "Justin";
+let name = "Justin".t;
 let age = 29;
 
 function is_even(number_to_evaluate) {

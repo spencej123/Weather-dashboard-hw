@@ -22,5 +22,5 @@ $(document).ready(() => {
   // Make a form and a button so that someone can enter input
   // Make some way for the form to genrate something we are looking for
   // Make an event that takes the form input and gives it to our api
-  // Take the form input and passes it to a function that calls our api
+  // Take the form input and passes it to a function that calls the weather api api
 });
