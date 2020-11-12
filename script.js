@@ -17,7 +17,6 @@ function search(city) {
 }
 
 $(document).ready(() => {
-  //search("New York");
   // Need to be able to put in a city and get the weather forecast for that city
   // Make a form and a button so that someone can enter input
   // Make some way for the form to genrate something we are looking for
@@ -27,6 +26,8 @@ $(document).ready(() => {
   form.addEventListener("click", (e) => {
     e.preventDefault();
     console.log("Hey");
+    let search_value = document.getElementById("search_text").value;
+    search(search_value);
   });
-  // Take the form input and passes it to a function that calls the weather api api
+  // Take the form input apasses it tnd o a function that calls the weather api api
 });
