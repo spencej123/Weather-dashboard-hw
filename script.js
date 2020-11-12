@@ -22,5 +22,11 @@ $(document).ready(() => {
   // Make a form and a button so that someone can enter input
   // Make some way for the form to genrate something we are looking for
   // Make an event that takes the form input and gives it to our api
+  const form = document.getElementById("search_btn");
+
+  form.addEventListener("click", (e) => {
+    e.preventDefault();
+    console.log("Hey");
+  });
   // Take the form input and passes it to a function that calls the weather api api
 });
