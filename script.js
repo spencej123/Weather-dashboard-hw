@@ -9,10 +9,14 @@ function search(city) {
   $.ajax({
     url: queryUrl,
     method: "GET",
-  }).then((res) => {
+  }).then((result) => {
     // append the results to the page
     // JQuery has a .append() method
-    console.log(res);
+    console.log(result);
+    $("#weather-result").append(`<div id="result">
+    <h1>${result.name}</h1>
+    <p></p>
+  </div>`);
   });
 }
 
@@ -25,9 +29,10 @@ $(document).ready(() => {
 
   form.addEventListener("click", (e) => {
     e.preventDefault();
-    console.log("Hey");
     let search_value = document.getElementById("search_text").value;
     search(search_value);
   });
   // Take the form input apasses it tnd o a function that calls the weather api api
+  // Make a div that allows the object to show up on the page.
+  // Connect the div to the api response
 });
