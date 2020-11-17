@@ -1,10 +1,24 @@
+/*starting With Variables*/ 
+function initPage() {
+  let inputEl = document.getElementById("city-input");
+  let searchEl = document.getElementById("search-button");
+  let clearEl = document.getElementById("clear-history");
+  let nameEl = document.getElementById("city-name");
+  let currentPicEl = document.getElementById("current-pic");
+  let currentTempEl = document.getElementById("temperature");
+  let currentHumidityEl = document.getElementById("humidity");4
+  let currentWindEl = document.getElementById("wind-speed");
+  let currentUVEl = document.getElementById("UV-index");
+  let historyEl = document.getElementById("history");
+  let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
+  console.log(searchHistory);
+
 /*Storing the API*/
 
-function search(city) {
-  let queryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=fa896ed47bc3eefe52d8d9fe53f94e29`;
-  let full_query_url =
+function getWeather(cityName) {
+  let queryUrl = 
     "https://api.openweathermap.org/data/2.5/weather?q=" +
-    city +
+    cityName +
     "&appid=fa896ed47bc3eefe52d8d9fe53f94e29";
   $.ajax({
     url: queryUrl,
